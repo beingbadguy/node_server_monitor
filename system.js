@@ -5,8 +5,8 @@ function cpuUsage(oldCpu, newCpu) {
   const oldCpuTimes = oldCpu.times;
   const newCpuTimes = newCpu.times;
   const idleDiff = newCpuTimes.idle - oldCpuTimes.idle;
-  const totalOld = Object.values(oldCpuTimes).reduce((a, b) => a + b,0);
-  const totalNew = Object.values(newCpuTimes).reduce((a, b) => a + b,0);
+  const totalOld = Object.values(oldCpuTimes).reduce((a, b) => a + b, 0);
+  const totalNew = Object.values(newCpuTimes).reduce((a, b) => a + b, 0);
   const total = totalNew - totalOld;
   const percentageUsedUsage = ((total - idleDiff) / total) * 100;
 
